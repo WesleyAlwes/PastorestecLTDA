@@ -1,0 +1,176 @@
+body {
+    background-color: black;
+    color: white;
+    position: relative; /* necessário para o overlay (se preferir fixed, pode remover) */
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5); /* ajuste o 0.5 para escurecer mais/menos */
+    pointer-events: none;
+    z-index: 900; /* abaixo do header (1000) e dos botões (1002) — aumente se quiser cobrir também o topo */
+}
+
+.logo {
+    background: transparent;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    position: fixed;      /* alterado para ficar fixo no topo */
+    left: 20px;
+    top: 20px;            /* centra verticalmente no cabeçalho de 64px */
+    z-index: 1002;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    
+}
+.logo:hover {
+    opacity: 0.95;
+    transform: scale(1.02);
+}
+
+.topo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;               
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    padding: 0 80px;            
+    background-color:#6c3483;  
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* navegação no centro */
+.topo ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+.topo ul li {
+    margin: 0;
+    background: transparent;    /* sem caixa azul nos itens */
+    border-radius: 6px;
+    padding: 4px;
+    font-weight: 600;
+    color: white;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.topo ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+.topo ul li a:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-2px);
+}
+
+
+.btnlogin {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1002;
+    background: #6c3483;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.btnlogin:hover {
+    background: rgba(255,255,255,0.14);
+    transform: scale(1.02);
+}
+
+main {
+    padding-top: 80px;  
+}
+
+
+.conteudo_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;          /* espaço entre texto e imagem */
+    flex-wrap: wrap;
+    padding-left: 40px;
+}
+
+.conteudo_texto {
+    padding-left: 100px;
+    max-width: 420px;
+    color: white;
+    order: 1;
+}
+
+.central {
+    order: 2;
+}
+
+.central img {
+    width: 500px;       /* tamanho fixo desejado */
+    padding-left: 200px;
+    max-width: 40vw;    /* não cresce demais em telas grandes */
+    height: auto;       /* mantém proporção */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 8px;   /* pequeno afastamento extra, se necessário */
+}
+
+/* responsivo: diminui e empilha em telas pequenas */
+@media (max-width: 600px) {
+    .conteudo_container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .central img {
+        width: 100%;
+        max-width: 320px;
+        margin-left: 0;
+    }
+}
+
+.curso {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-left: 180px;
+    align-items: center;
+    padding-left: 40px;
+    flex-wrap: nowrap;
+}
+
+.curso_card1, .curso_card2, .curso_card3 {
+    flex-shrink: 0;
+}
+
+.curso_card1 img, .curso_card2 img, .curso_card3 img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+h2 {
+    margin-top: 40px;
+    text-align: center;
+
+}   
