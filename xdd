@@ -1,0 +1,23 @@
+[33mcommit b81e740a629fb3e72730be7cce70d5f1c3f4edaa[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Wesley Alves <wesleytre03@gmail.com>
+Date:   Tue Nov 11 04:46:32 2025 -0300
+
+    Home page completa(faltando apenas o js)
+
+[33mcommit a15a0a074338ab1829d51877c9c66b95c0b28bc3[m[33m ([m[1;32mnova-branch[m[33m)[m
+Author: Wesley Alves <wesleytre03@gmail.com>
+Date:   Tue Nov 11 04:40:42 2025 -0300
+
+    Removendo PastorestecLTDA (bugzin)
+
+[33mcommit 507793cf95b202a806036c397736ae0d7972e4b7[m
+Author: Guilherme <guisilvapereira28@gmail.com>
+Date:   Sun Nov 9 22:36:39 2025 -0300
+
+    HTML completo
+
+[33mcommit c1a64989f034870dfd9b32748f56962a42037ad5[m
+Author: Wesley Alves <wesleytre03@gmail.com>
+Date:   Sun Nov 9 21:35:38 2025 -0300
+
+    Primeiro commit
