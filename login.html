@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pastorestec.net</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="pagina_acesso">
+        <div class="imagem-container">
+            <img src="Imagens/login.png" alt="login">
+        </div>
+        <div class="container_acesso">
+            <h2>Acesse sua conta</h2>
+            <form action="#">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+
+            <p>Não tem uma conta? <span class="switch-tab" data-tab="cadastro">Cadastre-se</span></p>
+            
+            <div class="cadastro">
+                <h2>Crie sua conta</h2>
+                <form action="#">
+                    <input type="text" placeholder="Nome completo" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Senha" required>
+                    <input type="password" placeholder="Confirmar Senha" required>
+                    <button type="submit" class="btn-submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

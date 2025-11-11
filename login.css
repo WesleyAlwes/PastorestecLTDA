@@ -1,0 +1,74 @@
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.pagina_acesso {
+    display: flex;
+    flex-direction: row; /* Coloca os itens lado a lado */
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagem-container {
+    flex: 1; /* Faz a imagem ocupar metade do espaço */
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 100%; /* Ajuste para a imagem se ajustar adequadamente */
+    height: 500px;
+    border-radius: 8px;
+}
+
+.container_acesso {
+    flex: 1; /* Faz o formulário ocupar o outro lado */
+    padding: 20px;
+    max-width: 500px; /* Limita o tamanho do formulário */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo com transparência */
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+form input {
+    background-color: #222;
+    color: white;
+}
+
+form button {
+    background-color: #6c3483;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #6c3483;
+}
+
+.cadastro {
+    margin-top: 20px;
+}
+
+.cadastro form input {
+    margin-bottom: 10px;
+}
