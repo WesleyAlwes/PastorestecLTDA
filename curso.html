@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Cursos</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d1b2a; 
+            color: #fff;
+            margin: 40px;
+        }
+        
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: auto;
+            background: #6c3483;
+            box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #1b011f; /* rosa */
+            padding: 14px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f72585; /* rosa principal */
+            color: white;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #6c3483; /* azul mais escuro */
+        }
+
+        tr:hover {
+            background-color: #2b033a; /* efeito hover rosa translúcido */
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 8px #f7258560;
+        }
+
+        .btn {
+            background-color: #f72585;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff79c6;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Lista de Cursos Disponíveis</caption>
+        <thead>
+            <tr>
+                <th>Nome do Curso</th>
+                <th>Duração</th>
+                <th>Modalidade</th>
+                <th>Valor</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Introdução à Programação</td>
+                <td>3 meses</td>
+                <td>Online</td>
+                <td>R$ 299,00</td>
+                <td><button class="btn">Inscreva-se</button></td>
+            </tr>
+            <tr>
+                <td>Marketing Digital Essencial</td>
+                <td>4 meses</td>
+                <td>Online</td>
+                <td>R$ 399,00</td>
+                <td><button class="btn">Inscreva-se</button></td>
+            </tr>
+            <tr>
+                <td>Gestão de Projetos</td>
+                <td>5 meses</td>
+                <td>Híbrido</td>
+                <td>R$ 450,00</td>
+                <td><button class="btn">Inscreva-se</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

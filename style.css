@@ -1,16 +1,9 @@
 body {
     background-color: black;
     color: white;
-    position: relative; /* necessário para o overlay (se preferir fixed, pode remover) */
+    position: relative;
 }
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5); /* ajuste o 0.5 para escurecer mais/menos */
-    pointer-events: none;
-    z-index: 900; /* abaixo do header (1000) e dos botões (1002) — aumente se quiser cobrir também o topo */
-}
+
 
 .logo {
     background: transparent;
@@ -19,9 +12,9 @@ body::before {
     text-decoration: none;
     border-radius: 6px;
     font-weight: 700;
-    position: fixed;      /* alterado para ficar fixo no topo */
+    position: fixed;
     left: 20px;
-    top: 20px;            /* centra verticalmente no cabeçalho de 64px */
+    top: 20px;
     z-index: 1002;
     border: 1px solid rgba(255,255,255,0.08);
     transition: opacity 0.2s ease, transform 0.2s ease;
@@ -41,7 +34,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;    
-    padding: 0 80px;            
+    padding: 0 10px;            
     background-color:#6c3483;  
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -99,7 +92,7 @@ body::before {
 }
 
 main {
-    padding-top: 80px;  
+    padding-top: 100px;  
 }
 
 
@@ -109,14 +102,18 @@ main {
     justify-content: flex-start;
     gap: 32px;          /* espaço entre texto e imagem */
     flex-wrap: wrap;
-    padding-left: 40px;
+    padding-left: 10px;
+    margin-top: 100px;
+    padding: 0 20px;
 }
 
 .conteudo_texto {
-    padding-left: 100px;
+    padding-left: clamp(20px, 10vw, 100px);
+    margin-left: 180px;
     max-width: 420px;
     color: white;
     order: 1;
+    margin-top: 40px;
 }
 
 .central {
@@ -124,13 +121,12 @@ main {
 }
 
 .central img {
-    width: 500px;       /* tamanho fixo desejado */
-    padding-left: 200px;
-    max-width: 40vw;    /* não cresce demais em telas grandes */
-    height: auto;       /* mantém proporção */
+    width: clamp(250px, 80vw, 450px);
+    padding-left: clamp(20px, 5vw, 350px);
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
-    margin-left: 8px;   /* pequeno afastamento extra, se necessário */
+    display: block;
 }
 
 /* responsivo: diminui e empilha em telas pequenas */
@@ -143,18 +139,25 @@ main {
     .central img {
         width: 100%;
         max-width: 320px;
-        margin-left: 0;
+        margin-left: 0px;
     }
+}
+.curso_destaque {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
 }
 
 .curso {
     margin-top: 50px;
     display: flex;
-    gap: 20px;
+    gap: 18px;
     justify-content: flex-start;
     margin-left: 180px;
     align-items: center;
-    padding-left: 40px;
+    padding: 20px 20px 20px 20px;
     flex-wrap: nowrap;
 }
 
@@ -163,14 +166,73 @@ main {
 }
 
 .curso_card1 img, .curso_card2 img, .curso_card3 img {
-    width: 200px;
-    height: 200px;
+    width: clamp(120px, 25vw, 150px);
+    height: clamp(120px, 25vw, 150px);
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
     display: block;
+    padding: 0 clamp(10px, 5vw, 20px);
 }
 h2 {
     margin-top: 40px;
+    margin-right: 180px;
     text-align: center;
+}
 
-}   
+@media (max-width: 800px) {
+    .topo{
+        padding: 0 10px;
+    }
+    .conteudo_container {
+        gap: 20px;
+        margin-top: 100px;
+        flex-direction: column;
+    }
+    .curso {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 30px;
+        margin-right: 100px;
+    }
+    h1 {
+        margin-right: 150px;
+    }
+    h2 {
+        margin-right: 10px;
+    }
+        
+}
+@media (max-width: 768px) {
+    .topo ul {
+        gap: 12px;
+    }
+    
+    .topo ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    
+    .conteudo_container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 0 15px;
+    }
+    
+    .conteudo_texto {
+        padding-left: 20px;
+        text-align: center;
+    }
+    
+    .central img {
+        padding-left: 0;
+    }
+    
+    .curso {
+        flex-direction: column;
+        margin-left: 100px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
