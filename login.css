@@ -72,3 +72,41 @@ form button:hover {
 .cadastro form input {
     margin-bottom: 10px;
 }
+#paginaInicial {
+    position: fixed;
+    top: 0;
+    left: 120px;
+}
+@media (max-width: 700px) {
+    #paginaInicial {
+        left: 35px;
+    }
+    img{
+        height: 500px;
+        width: 380px;
+    }
+
+    
+}
+@media (max-width: 600px) {
+    #paginaInicial {
+        left: 15px;
+    }
+    img{
+        height: 300px;
+        width: 180px;
+    }
+
+    
+}
+@media (max-width: 300px) {
+    #paginaInicial {
+        left: 15px;
+    }
+    img{
+        height: 300px;
+        width: 180px;
+    }
+
+    
+}
