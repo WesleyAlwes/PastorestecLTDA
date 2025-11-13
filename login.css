@@ -75,8 +75,15 @@ form button:hover {
 }
 #paginaInicial {
     position: fixed;
-    top: 0;
-    left: 120px;
+    top: 12px;
+    left: 125px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+#paginaInicial:hover {
+    background-color: rgba(157, 157, 157, 0.8);
 }
 footer {
     text-align: center;

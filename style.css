@@ -134,7 +134,7 @@ main {
     gap: 32px;
     flex-wrap: wrap;
     padding: 0 20px;
-    margin-top: 60px;
+    margin-top: 10px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -151,6 +151,7 @@ main {
     font-size: clamp(28px, 5vw, 48px);
     margin: 0;
     line-height: 1.2;
+    margin-left: 50px;
 }
 
 .central {
@@ -163,6 +164,7 @@ main {
     object-fit: cover;
     border-radius: 8px;
     display: block;
+    margin-left: 110px;
 }
 
 .introducao {

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Tabela de Cursos</title>
     <style>
         body {
@@ -52,7 +53,7 @@
             text-shadow: 0 0 8px #f7258560;
         }
 
-        .btn {
+        #curso1, #curso2, #curso3 {
             background-color: #f72585;
             color: white;
             padding: 8px 16px;
@@ -102,10 +103,10 @@
             }
             footer{
                 text-align: center;
-            padding: 40px 20px;
-            margin-top: 100px;
-            color: rgba(255,255,255,0.7);
-            font-size: 14px;
+                padding: 40px 20px;
+                margin-top: 100px;
+                color: rgba(255,255,255,0.7);
+                font-size: 14px;
             }
         }
         footer {
@@ -144,26 +145,62 @@
                 <td>3 meses</td>
                 <td>Online</td>
                 <td>R$ 199,00</td>
-                <td><button class="btn">Inscreva-se</button></td>
+                <td><button id="curso1" onclick= "curso1(this)">Inscreva-se</button></td>
             </tr>
             <tr>
                 <td>Marketing Digital Essencial</td>
                 <td>4 meses</td>
                 <td>Online</td>
                 <td>R$ 299,00</td>
-                <td><button class="btn">Inscreva-se</button></td>
+                <td><button id="curso2" onclick= "curso2(this)">Inscreva-se</button></td>
             </tr>
             <tr>
                 <td>Gestão de Projetos</td>
                 <td>5 meses</td>
                 <td>Híbrido</td>
                 <td>R$ 350,00</td>
-                <td><button class="btn">Inscreva-se</button></td>
+                <td><button id="curso3" onclick= "curso3(this)"">Inscreva-se</button></td>
             </tr>
         </tbody>
     </table>
     <footer>
         © 2025 Pastorestec.net
     </footer>
+    <script>
+        function curso1(btn) {
+            Swal.fire({
+                title: 'Inscrição Realizada!',
+                text: 'Você se inscreveu com sucesso no curso.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+            btn.innerText = "Inscrito";
+            btn.disabled = true;
+            
+        }
+        function curso2(btn) {
+            Swal.fire({
+                title: 'Inscrição Realizada!',
+                text: 'Você se inscreveu com sucesso no curso.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+            btn.innerText = "Inscrito";
+            btn.disabled = true;
+            
+        }
+        function curso3(btn) {
+            Swal.fire({
+                title: 'Inscrição Realizada!',
+                text: 'Você se inscreveu com sucesso no curso.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+            btn.innerText = "Inscrito";
+            btn.disabled = true;
+            
+        }
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PastortecLTDA</title>
+    <script src="script.js" defer></script>
+    <!-- Importar a fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d1b2a; 
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #pagina_Inicial {
+            display: flex;
+            position: fixed;
+            top: 10px;
+            left: 200px;
+            padding: 10px 15px;
+            background-color: #1c2b3a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        #pagina_Inicial i {
+            margin-right: 8px;
+        }
+
+        #pagina_Inicial:hover {
+            background-color: #2b3a4b;
+        }
+
+        img {
+            display: block;
+            margin: 40px auto 20px auto;
+            width: 420px;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+            background-color: #1c2b3a;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .indroducao_ceo {
+            width: 80%;
+            margin: 0 auto 40px auto;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: center;
+            
+        }
+        #observacao {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            font-style: italic;
+            color: #dd0606;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <a href="index.html">
+        <button id="pagina_Inicial">
+            <i class="iconbtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                </svg>
+            </i> Página Inicial
+        </button>
+    </a>
+    <img src="Imagens/Ceo.jpg" alt="Logo PastortecLTDA">
+    <div class="indroducao_ceo">
+        <span>À frente da Pastortec, está nosso CEO, Pastor Gleydson, um líder visionário comprometido em transformar a forma como as pessoas aprendem. Com uma visão inovadora e foco na qualidade do ensino, ele conduz a empresa com dedicação, buscando sempre oferecer cursos acessíveis, atualizados e capazes de impulsionar o desenvolvimento pessoal e profissional de cada aluno.
+        No nosso site, o estudante tem liberdade para estudar no seu próprio ritmo, de onde estiver, contando com materiais de apoio, vídeo aulas, exercícios interativos e suporte dedicado. Nosso objetivo é transformar o aprendizado em uma experiência simples, eficiente e inspiradora, ajudando você a alcançar seus objetivos e construir um futuro com mais oportunidades.<br>
+        </span><span id="observacao">OBS: "Para qualquer processo legal esse é o nosso CEO. Resolva com ele o seu B.O" <br> Assinado: Funcionário do Mês</span>
+    </div>
+    <div class="parceiros">
+        <h2 style="text-align: center; margin-bottom: 20px; margin-top: 30px;">Nossos Parceiros:</h2>
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <img src="Imagens/Parceiro1.jpg" alt="Parceiro 1" style="width: 150px; height: auto;">
+            <img src="Imagens/Parceiro2.jpg" alt="Parceiro 2" style="width: 150px; height: auto;">
+            <img src="Imagens/Parceiro3.jpg" alt="Parceiro 3" style="width: 150px; height: auto;">
+            
+        </div>
+    </div>
+    
+    <footer>
+        © 2025 PastortecLTDA.net
+    </footer>
+</body>
+
+</html>
