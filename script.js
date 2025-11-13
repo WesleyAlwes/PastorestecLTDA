@@ -20,6 +20,4 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("paginaInicial").addEventListener("click", function() {
     window.location.href = "index.html";
 });
-document.getElementById("pagina_Inicial").addEventListener("click", function() {
-    window.location.href = "index.html";
-});
+
